@@ -4,4 +4,21 @@ A production-minded MERN MVP for a faith-based speaker/writer platform with beau
 
 ## Current status
 - ✅ Phase 1 architecture and schema planning complete.
-- See `docs/PHASE1_ARCHITECTURE.md` for full product vision, design language, feature breakdown, monorepo file tree, and database schema outline.
+- ✅ Phase 2 backend scaffold complete (Express + MongoDB + JWT auth + Socket.IO + core models/routes/controllers/middleware).
+
+## Planning docs
+- `docs/PHASE1_ARCHITECTURE.md`
+
+## Backend quick start
+```bash
+cd server
+cp .env.example .env
+npm install
+npm run dev
+```
+
+## Seed default chat rooms
+```bash
+cd server
+npm run seed
+```
