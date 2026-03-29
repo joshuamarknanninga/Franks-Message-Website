@@ -1,0 +1,13 @@
+{
+  "name": "franks-message-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monorepo for Frank's Message Website",
+  "scripts": {
+    "dev": "npm --prefix server run dev",
+    "start": "npm --prefix server run start",
+    "seed": "npm --prefix server run seed",
+    "server:dev": "npm --prefix server run dev",
+    "server:start": "npm --prefix server run start"
+  }
+}
