@@ -1,0 +1,20 @@
+{
+  "name": "franks-message-website",
+  "version": "1.0.0",
+  "description": "This is going to be the definitive website for Frank's message.",
+  "homepage": "https://github.com/joshuamarknanninga/Franks-Message-Website#readme",
+  "bugs": {
+    "url": "https://github.com/joshuamarknanninga/Franks-Message-Website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuamarknanninga/Franks-Message-Website.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
