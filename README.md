@@ -9,16 +9,21 @@ A production-minded MERN MVP for a faith-based speaker/writer platform with beau
 ## Planning docs
 - `docs/PHASE1_ARCHITECTURE.md`
 
+## Monorepo scripts (run from repository root)
+```bash
+npm run dev
+npm run start
+npm run seed
+```
+
 ## Backend quick start
 ```bash
+cp server/.env.example server/.env
 cd server
-cp .env.example .env
 npm install
+cd ..
 npm run dev
 ```
 
-## Seed default chat rooms
-```bash
-cd server
-npm run seed
-```
+## API health check
+- `GET /api/health`

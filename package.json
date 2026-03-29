@@ -1,20 +1,13 @@
 {
   "name": "franks-message-website",
+  "private": true,
   "version": "1.0.0",
-  "description": "This is going to be the definitive website for Frank's message.",
-  "homepage": "https://github.com/joshuamarknanninga/Franks-Message-Website#readme",
-  "bugs": {
-    "url": "https://github.com/joshuamarknanninga/Franks-Message-Website/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joshuamarknanninga/Franks-Message-Website.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "description": "Monorepo for Frank's Message Website",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm --prefix server run dev",
+    "start": "npm --prefix server run start",
+    "seed": "npm --prefix server run seed",
+    "server:dev": "npm --prefix server run dev",
+    "server:start": "npm --prefix server run start"
   }
 }
