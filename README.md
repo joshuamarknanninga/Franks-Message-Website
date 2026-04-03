@@ -32,6 +32,14 @@ If `MONGODB_URI` is not set, the backend starts in **database-offline mode** (no
 
 If port `5000` is already in use (non-production), the server automatically retries on `5001`, `5002`, etc.
 
+## Vite HMR websocket note
+If Chrome shows `[vite] failed to connect to websocket`, this repo now pins HMR to localhost:5173 in `client/vite.config.js` to avoid host/port drift.
+
+If needed, stop currently running dev processes (`Ctrl + C`) and run:
+```bash
+npm run dev
+```
+
 ## Run individually
 ```bash
 npm run dev:server
