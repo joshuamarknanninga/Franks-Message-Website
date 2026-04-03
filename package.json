@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "description": "Monorepo for Frank's Message Website",
   "scripts": {
+    "setup": "npm --prefix server install && npm --prefix client install",
+    "predev": "npm --prefix server install",
     "dev": "npm --prefix server run dev",
     "start": "npm --prefix server run start",
     "seed": "npm --prefix server run seed",
