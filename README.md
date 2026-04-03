@@ -14,27 +14,30 @@ A production-minded MERN MVP for a faith-based speaker/writer platform with beau
 ## Planning docs
 - `docs/PHASE1_ARCHITECTURE.md`
 
-## One-time setup (recommended)
+## One-time setup
 ```bash
 npm run setup
 ```
 
-## Run backend from root
+## Run full stack (server + client together)
 ```bash
 npm run dev
 ```
 
-`npm run dev` automatically runs `predev`, which installs server dependencies before starting.
+`npm run dev` now starts both:
+- backend: `http://localhost:5000` (or fallback port in non-production)
+- frontend: `http://localhost:5173`
 
-If `MONGODB_URI` is not set, the server starts in **database-offline mode** (non-production) so frontend/UI work can continue. In production, DB connection failures still stop boot.
+If `MONGODB_URI` is not set, the backend starts in **database-offline mode** (non-production) so frontend/UI work can continue. In production, DB connection failures still stop boot.
 
-If port `5000` is already in use (non-production), the server now automatically retries on the next available port (`5001`, `5002`, ...).
+If port `5000` is already in use (non-production), the server automatically retries on `5001`, `5002`, etc.
 
-## Additional scripts
+## Run individually
 ```bash
+npm run dev:server
+npm run dev:client
 npm run start
 npm run seed
-npm run client:dev
 npm run client:build
 ```
 
