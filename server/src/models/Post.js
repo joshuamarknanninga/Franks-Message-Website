@@ -10,6 +10,7 @@ const postSchema = new mongoose.Schema(
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     categories: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Category' }],
     tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Tag' }],
+    series: { type: String, default: '', trim: true, index: true },
     featured: { type: Boolean, default: false },
     published: { type: Boolean, default: false },
     publishedAt: { type: Date },
