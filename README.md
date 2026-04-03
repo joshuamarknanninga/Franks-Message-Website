@@ -26,6 +26,8 @@ npm run dev
 
 `npm run dev` automatically runs `predev`, which installs server dependencies before starting.
 
+If `MONGODB_URI` is not set, the server now starts in **database-offline mode** (non-production) so frontend/UI work can continue. In production, DB connection failures still stop boot.
+
 ## Additional scripts
 ```bash
 npm run start
@@ -35,4 +37,4 @@ npm run client:build
 ```
 
 ## API health check
-- `GET /api/health`
+- `GET /api/health` returns server status and database state.

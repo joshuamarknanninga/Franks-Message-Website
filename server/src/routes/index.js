@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import mongoose from 'mongoose';
 import authRoutes from './authRoutes.js';
 import postRoutes from './postRoutes.js';
 import categoryRoutes from './categoryRoutes.js';
@@ -13,7 +14,10 @@ import productRoutes from './productRoutes.js';
 const router = Router();
 
 router.get('/health', (_req, res) => {
-  res.json({ message: 'Server is healthy' });
+  res.json({
+    message: 'Server is healthy',
+    database: mongoose.connection.readyState === 1 ? 'connected' : 'offline',
+  });
 });
 
 router.use('/auth', authRoutes);

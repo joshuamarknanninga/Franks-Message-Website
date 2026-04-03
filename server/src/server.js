@@ -5,13 +5,13 @@ import env from './config/env.js';
 import initializeSockets from './sockets/index.js';
 
 const boot = async () => {
-  await connectDb();
+  const dbConnected = await connectDb();
 
   const httpServer = http.createServer(app);
   initializeSockets(httpServer);
 
   httpServer.listen(env.port, () => {
-    console.log(`Server running on port ${env.port}`);
+    console.log(`Server running on port ${env.port} (db: ${dbConnected ? 'connected' : 'offline'})`);
   });
 };
 
