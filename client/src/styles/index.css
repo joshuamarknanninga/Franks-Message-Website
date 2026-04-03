@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0f1f46;
+  background: #fbf8f1;
+}
+
+body {
+  @apply font-body bg-parchment text-midnight;
+}
+
+.reading-mode {
+  @apply text-lg leading-9 max-w-3xl;
+}
+
+.default-reading {
+  @apply text-base leading-7 max-w-2xl;
+}
