@@ -26,14 +26,16 @@ npm run dev
 
 `npm run dev` now starts both:
 - backend: `http://localhost:5000` (or fallback port in non-production)
-- frontend: `http://localhost:5173`
+- frontend: `http://127.0.0.1:5173`
 
 If `MONGODB_URI` is not set, the backend starts in **database-offline mode** (non-production) so frontend/UI work can continue. In production, DB connection failures still stop boot.
 
 If port `5000` is already in use (non-production), the server automatically retries on `5001`, `5002`, etc.
 
 ## Vite HMR websocket note
-If Chrome shows `[vite] failed to connect to websocket`, this repo now pins HMR to localhost:5173 in `client/vite.config.js` to avoid host/port drift.
+If Chrome shows `[vite] failed to connect to websocket`, open the frontend using `http://127.0.0.1:5173` (not `localhost`).
+
+This repo now pins Vite host + HMR host/client port/path to avoid localhost/IP mismatch issues.
 
 If needed, stop currently running dev processes (`Ctrl + C`) and run:
 ```bash
