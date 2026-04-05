@@ -10,6 +10,7 @@ A production-minded MERN MVP for a faith-based speaker/writer platform with beau
   - Series listing + series detail flows
   - Prayer wall with privacy controls and moderation approval pipeline
   - Animated sunrise hero experience
+  - Split-hero layout (Option B): text left + editorial image right
 
 ## Planning docs
 - `docs/PHASE1_ARCHITECTURE.md`
@@ -31,6 +32,12 @@ npm run dev
 If `MONGODB_URI` is not set, the backend starts in **database-offline mode** (non-production) so frontend/UI work can continue. In production, DB connection failures still stop boot.
 
 If port `5000` is already in use (non-production), the server automatically retries on `5001`, `5002`, etc.
+
+## Hero image setup (Option B)
+Place your selected study-group image at:
+- `client/public/hero-berea.jpg`
+
+The homepage hero is now configured as a split layout with copy on the left and this image on the right.
 
 ## Vite HMR websocket note
 If Chrome shows `[vite] failed to connect to websocket`, open the frontend using `http://127.0.0.1:5173` (not `localhost`).
