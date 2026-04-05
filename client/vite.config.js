@@ -5,14 +5,14 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '127.0.0.1',
-    port: 5173,
+    port: 5473,
     strictPort: true,
     origin: 'http://127.0.0.1:5173',
     hmr: {
       protocol: 'ws',
       host: '127.0.0.1',
-      port: 5173,
-      clientPort: 5173,
+      port: 5473,
+      clientPort: 5473,
       path: '/__vite_ws',
       timeout: 120000,
     },
