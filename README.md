@@ -34,6 +34,13 @@ npm run dev
 - backend: `http://localhost:5000` (or fallback port in non-production)
 - frontend: `http://127.0.0.1:5473`
 
+
+## Administrator login
+1. Seed admin (once): `POST /api/auth/seed-admin`
+2. Open frontend: `http://127.0.0.1:5473/admin/login`
+3. Sign in with `ADMIN_EMAIL` and `ADMIN_PASSWORD` from `server/.env`
+4. Access dashboard at `/admin/dashboard`
+
 ## Recording Studio routes
 - Frontend page: `/recording-studio`
 - API intake: `POST /api/recording-intakes`

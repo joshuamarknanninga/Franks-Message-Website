@@ -6,6 +6,7 @@ const links = [
   ['/series', 'Series'],
   ['/prayer-wall', 'Prayer Wall'],
   ['/recording-studio', 'Recording Studio'],
+  ['/admin/login', 'Admin Login'],
 ];
 
 const PublicLayout = () => (

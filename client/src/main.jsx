@@ -4,13 +4,16 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import './styles/index.css';
 import { ReadingModeProvider } from './context/ReadingModeContext.jsx';
+import { AdminAuthProvider } from './context/AdminAuthContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <ReadingModeProvider>
-        <App />
-      </ReadingModeProvider>
+      <AdminAuthProvider>
+        <ReadingModeProvider>
+          <App />
+        </ReadingModeProvider>
+      </AdminAuthProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
