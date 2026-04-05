@@ -65,7 +65,8 @@ const RecordingStudioPage = () => {
   const submitTranscript = transcriptForm.handleSubmit(async (values) => {
     try {
       await api.patch(`/audio/${values.audioId}`, { transcript: values.transcript });
-      const absolute = `${window.location.origin.replace('5173', '5000')}/api/audio/rss.xml`;
+      const apiOrigin = new URL(import.meta.env.VITE_API_URL || 'http://localhost:5000/api').origin;
+      const absolute = `${apiOrigin}/api/audio/rss.xml`;
       setRssUrl(absolute);
       helpers.setOk('Transcript attached and podcast RSS is ready.');
       transcriptForm.reset();

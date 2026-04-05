@@ -32,7 +32,7 @@ npm run dev
 
 `npm run dev` starts both:
 - backend: `http://localhost:5000` (or fallback port in non-production)
-- frontend: `http://127.0.0.1:5173`
+- frontend: `http://127.0.0.1:5473`
 
 ## Recording Studio routes
 - Frontend page: `/recording-studio`
@@ -45,7 +45,7 @@ Place your selected study-group image at:
 - `client/public/hero-berea.jpg`
 
 ## Vite HMR websocket note
-If Chrome shows `[vite] failed to connect to websocket`, open `http://127.0.0.1:5173` (not `localhost`).
+If Chrome shows `[vite] failed to connect to websocket`, open `http://127.0.0.1:5473` (not `localhost`).
 
 ## Run individually
 ```bash
