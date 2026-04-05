@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage.jsx';
 import MessagesPage from './pages/MessagesPage.jsx';
 import MessageDetailPage from './pages/MessageDetailPage.jsx';
 import PrayerWallPage from './pages/PrayerWallPage.jsx';
+import RecordingStudioPage from './pages/RecordingStudioPage.jsx';
 import SeriesDetailPage from './pages/SeriesDetailPage.jsx';
 import SeriesPage from './pages/SeriesPage.jsx';
 
@@ -16,6 +17,7 @@ const App = () => (
       <Route path="/series" element={<SeriesPage />} />
       <Route path="/series/:seriesName" element={<SeriesDetailPage />} />
       <Route path="/prayer-wall" element={<PrayerWallPage />} />
+      <Route path="/recording-studio" element={<RecordingStudioPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Route>
   </Routes>

@@ -10,6 +10,7 @@ import chatRoutes from './chatRoutes.js';
 import prayerRoutes from './prayerRoutes.js';
 import newsletterRoutes from './newsletterRoutes.js';
 import productRoutes from './productRoutes.js';
+import recordingIntakeRoutes from './recordingIntakeRoutes.js';
 
 const router = Router();
 
@@ -30,5 +31,6 @@ router.use('/chat', chatRoutes);
 router.use('/prayer-requests', prayerRoutes);
 router.use('/newsletter-subscribers', newsletterRoutes);
 router.use('/products', productRoutes);
+router.use('/recording-intakes', recordingIntakeRoutes);
 
 export default router;

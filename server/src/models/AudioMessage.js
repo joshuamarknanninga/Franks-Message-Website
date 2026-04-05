@@ -5,6 +5,7 @@ const audioMessageSchema = new mongoose.Schema(
     title: { type: String, required: true, trim: true },
     slug: { type: String, required: true, unique: true, trim: true },
     description: { type: String, default: '' },
+    transcript: { type: String, default: '' },
     speaker: { type: String, default: 'Frank' },
     scriptureReference: { type: String, default: '' },
     series: { type: String, default: '' },
@@ -14,6 +15,16 @@ const audioMessageSchema = new mongoose.Schema(
     featured: { type: Boolean, default: false },
     publishedAt: { type: Date, default: Date.now },
     isPublished: { type: Boolean, default: true },
+    status: {
+      type: String,
+      enum: ['received', 'mastering', 'ready', 'published'],
+      default: 'received',
+    },
+    source: {
+      type: String,
+      enum: ['frank-phone', 'team-mastered', 'quick-publish'],
+      default: 'frank-phone',
+    },
   },
   { timestamps: true }
 );

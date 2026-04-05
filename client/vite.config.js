@@ -7,7 +7,7 @@ export default defineConfig({
     host: '127.0.0.1',
     port: 5473,
     strictPort: true,
-    origin: 'http://127.0.0.1:5173',
+    origin: 'http://127.0.0.1:5473',
     hmr: {
       protocol: 'ws',
       host: '127.0.0.1',
@@ -19,7 +19,7 @@ export default defineConfig({
   },
   preview: {
     host: '127.0.0.1',
-    port: 4173,
+    port: 4473,
     strictPort: true,
   },
 });

@@ -11,6 +11,11 @@ A production-minded MERN MVP for a faith-based speaker/writer platform with beau
   - Prayer wall with privacy controls and moderation approval pipeline
   - Animated sunrise hero experience
   - Split-hero layout (Option B): text left + editorial image right
+  - Recording Studio workflow (1–4 complete):
+    1. Upload mastered audio
+    2. Send recording to production intake
+    3. Quick publish from phone path
+    4. Transcript + podcast RSS feed endpoint
 
 ## Planning docs
 - `docs/PHASE1_ARCHITECTURE.md`
@@ -25,29 +30,22 @@ npm run setup
 npm run dev
 ```
 
-`npm run dev` now starts both:
+`npm run dev` starts both:
 - backend: `http://localhost:5000` (or fallback port in non-production)
-- frontend: `http://127.0.0.1:5173`
+- frontend: `http://127.0.0.1:5473`
 
-If `MONGODB_URI` is not set, the backend starts in **database-offline mode** (non-production) so frontend/UI work can continue. In production, DB connection failures still stop boot.
-
-If port `5000` is already in use (non-production), the server automatically retries on `5001`, `5002`, etc.
+## Recording Studio routes
+- Frontend page: `/recording-studio`
+- API intake: `POST /api/recording-intakes`
+- API quick publish: `POST /api/audio/quick-publish`
+- Podcast RSS: `GET /api/audio/rss.xml`
 
 ## Hero image setup (Option B)
 Place your selected study-group image at:
 - `client/public/hero-berea.jpg`
 
-The homepage hero is now configured as a split layout with copy on the left and this image on the right.
-
 ## Vite HMR websocket note
-If Chrome shows `[vite] failed to connect to websocket`, open the frontend using `http://127.0.0.1:5173` (not `localhost`).
-
-This repo now pins Vite host + HMR host/client port/path to avoid localhost/IP mismatch issues.
-
-If needed, stop currently running dev processes (`Ctrl + C`) and run:
-```bash
-npm run dev
-```
+If Chrome shows `[vite] failed to connect to websocket`, open `http://127.0.0.1:5473` (not `localhost`).
 
 ## Run individually
 ```bash
