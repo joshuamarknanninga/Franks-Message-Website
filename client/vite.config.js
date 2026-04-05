@@ -1,0 +1,25 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: '127.0.0.1',
+    port: 5473,
+    strictPort: true,
+    origin: 'http://127.0.0.1:5473',
+    hmr: {
+      protocol: 'ws',
+      host: '127.0.0.1',
+      port: 5473,
+      clientPort: 5473,
+      path: '/__vite_ws',
+      timeout: 120000,
+    },
+  },
+  preview: {
+    host: '127.0.0.1',
+    port: 4473,
+    strictPort: true,
+  },
+});
